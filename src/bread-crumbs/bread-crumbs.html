@@ -1,0 +1,9 @@
+<div id="bread-crumbs">
+    <div class="history-row">
+        <span ng-repeat="crumb in vm.breadcrumbTrail | limitTo: (vm.breadcrumbTrail.length - 1) track by $index">
+        <span ng-click="vm.go(crumb)" class="pointer link">{{crumb}}</span><span class="right-arrow"> > </span>
+        </span>
+    </div>
+
+    <div class="page-title">{{vm.breadcrumbTrail[vm.breadcrumbTrail.length - 1]}}</div>
+</div>

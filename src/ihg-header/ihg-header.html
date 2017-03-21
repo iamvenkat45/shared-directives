@@ -1,0 +1,65 @@
+<header class="row">
+    <div class="col-xs-12 header" ng-style="vm.setHeaderColor()">
+
+        <!-- Hamburger Menu -->
+        <div id="hamburger" class="pull-left" ng-if="vm.userLoggedIn">
+            <span class="fa hamburger pointer" ng-class="vm.hamClosed ? 'fa-bars': 'fa-times'" ng-click="vm.closeHam()" ng-mousedown="vm.hamDown()"></span>
+            <div ng-if="!vm.hamClosed" tabindex="-1" id="hamDropDown" class="ham-drop-down slide-right" ng-blur="vm.hamBlur()">
+                <div id="menuItem" ng-mouseover="vm.menuHover($event,menuItem)" ng-repeat="menuItem in vm.hamList track by $index" ng-click="vm.hamNavigate(menuItem.link);vm.setPageAccess(menuItem.viewOnly,menuItem.hotelSelectorRequired)" class="ham-menu-item pointer">
+                    <span class="fa {{menuItem.preIcon}} pre-admin-icon"></span> {{menuItem.name}}
+                    <i class="fa fa-chevron-right gt-float-left" aria-hidden="true" ng-show="menuItem.items.length !==0"></i>
+                    <ul id="subMenuItem" class="sub_sidebar" ng-repeat="subItem in menuItem.items track by $index" ng-style="vm.subPosition($index)">
+                        <li id="disableHover" ng-if="subItem.header"><strong>{{subItem.header.name}}</strong></li>
+                        <li ng-repeat="option in subItem.items track by $index" ui-sref="{{option.link}}" ui-sref-opts="{reload: true}">
+                            {{option.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo and Application Name -->
+        <div id="logo-title" class="pull-left logo-title cursor-pointer" ng-click="vm.navigateHome()">
+            <img id="ihg-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAoCAYAAAAIeF9DAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAABPZJREFUaIHtm2uIVGUcxn/Pqqsl6WZl9zIrKwuDSI1uFpppEZtBGUQfCqSiSIwShUDB7ENl9ztR4CfJIP3QXSKIMjPpopbmrtKFzFzXCg111acP76zOHudyzswZZzrtDwZ25rzz/N9znp33f877f1/opaFQvTtQb2z3B/rn3u6RtKue/YltiO3BwBjAZZr2BdqBv4CLgL0x2rdJaisRexAwNkbsPsAWSd+U0DoLmABcCpwDDAWOyB3eBWwFNgBfAB8DayWVi1soxghgJ7CiJibbHuv4PGH7pgTtHy0Te0wCrXcLfL/JdqvtZbb3JNDaZ3u57dsdfklxrtN42wts35t7zbbdJ+51borbMCGJ/qNS1uvR1vZo4FNgCTAe6JdAqwm4BFgIrLJ9bcnAdj9gHPA5cHwu1h/ANXED9k3Quf8ctmcB8yh8nl3ARmAT0EkwsgUYDpwJNEfanw+8b/sZYKakPQU0BwM7CMP1Gbm/1wOnx+1zFg3ZB2D7deCOAsd/AF4D3gHaJfXIcbabCKbcANxFyDP5TAfOs32bpI78A5I6bDcDI4HngXOBycCiuJ2v1ZBVT/rYfplDzeggXOALJT0paX3UDABJ+yW1SXoKGAXcT/iPz2cicGeR+G8AQ3LfPRlYJWl15adTBCdL6o873aQ+OoHWbodknM9y28OqOPcRtr/O05tfpn1f26fabkkaK4tDVnTs/wiYImlnpYKSfrQ9gTD0LJH0Qpn2e4FfKomVRUPy+RaYWo0Z3UjaZnsyuRxVK7JsyC5gmqTtaQkWyjlpk8Wk3s1zklbWuxNJyaohncCz9e5EJTSKIWk/2S+V9GvKmoeFRskhl9t+EBhQ4FgXMCyh3pKqe1QnGsWQK3OvNPgbWJWS1mGnUQxJk5+B3+I2dpjFbSGdYbOz2juxLBqyJWH9YhKwmFC7qJTuXDwOKFqLiUMWDUlaDGomTJMnnuYoolUVjXKXlSaxi0E50ixjV/0Un8VfyJCE7dcA84FC9Y1i7AcGEqbiu8u/XYQbiqpoFEOWAW9x8OTy6SIUjGbE1DrF9iBJsS6OpO+Bh2NqH8D28Eif/gS2JdWJ0iiGfCnplWIHHcqwcQ05iVBUqvW0yQUcXK0CsElSZ7WijZJD0l6ONDFlvUKMj7xfkYZooxiSNrc4LDioCbYHAtdHPv4wDe2sGjIKmFJD/ZsJea2bjcAnaQhn1RCAObaPSlvUYdHerMjHCyXtSEM/y4aMBErW6itkHj1XomwGit6QJCXLhgDcZ3t6WmK27yasQslnnqTf04qRdUMAnrb9ULUitu8Boosblkp6qVrtfLJoyHfAushnj9leZPuEpGK2W2y/CrxIz+u1FphWeTcLk0VD2oBWIFoxnAqssT3H9mnlRGwPtT0DWM2hF34D0CppaxodzqdRntTTZEBuHdVVwJuELRHdHAPMBWbaXkFYFL2Og2t7BwNnExZYX5Z7H+Uz4NZalYizaAgAktptXwE8QkjE+bPARwJX515x6QIWAHMl7U6toxFqNWQlnQop1z6J3oG2kv6R9AAwGnibcFGT0kUoYF0saXYtzYBkO6iGAjcSftqlKnLNwFeEfRHXUX5auxlYWWoNle3jcrEpE7sfsFHSB0V0RhCesicRthccXURnOyFpvwcslrSh5BmkyP92j6HtYwn7Nk4k1DYglHE3Az9Ftxr00ksvjcC/Kynr01vJ1FYAAAAASUVORK5CYII="
+            />
+            <div class="title-text pull-right">{{vm.title}}</div>
+        </div>
+
+        <!-- User Portrait, Username, Admin Dropdown Panel -->
+        <div id="admin" class="pull-right admin pointer" ng-click="vm.closeAdmin()" ng-mousedown="vm.adminDown()">
+            <div id="dropdown" class="pull-right">
+                <span class="fa fa-chevron-down admin-menu" ng-class="vm.adminClosed ? 'fa-chevron-down': 'fa-chevron-up'"></span>
+                <div ng-if="!vm.adminClosed" tabindex="-1" id="adminDropDown" class="admin-drop-down" ng-blur="vm.adminBlur()">
+                    <div ng-repeat="menuItemA in vm.adminList" ng-if="menuItemA.alwaysShow || vm.userLoggedIn" class="admin-menu-item pointer" ng-click="vm[menuItemA.link]()" ng-class="{'top-border': menuItemA.lineAbove}">
+                        <span ng-if="menuItemA.preIcon !== ''" class="fa {{menuItemA.preIcon}} pre-admin-icon"></span> {{menuItemA.name}}
+                        <span ng-if="menuItemA.postIcon !== ''" class="fa {{menuItemA.postIcon}} post-admin-icon"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="username" class="pull-right">
+                <span class="username-text">{{vm.userData.user.userName}}</span>
+            </div>
+            <div id="portrait" class="pull-right">
+                <span class="fa fa-user"></span>
+            </div>
+        </div>
+
+        <!-- Corporate/Hotel Selector -->
+        <div id="hotel-selector" class="pull-right hotel-selector" ng-if="vm.userLoggedIn" ng-init="vm.setHotelDetails()">
+            <div id="corp-selector-box" class="pull-left corp-selector-box pointer" ng-if="vm.showCorporateBox()" ng-click="vm.selectRadio('Corporate')">
+                <div ng-class="vm.showCorpSelected ? 'fa fa-check-circle corp-check' : 'fa fa-circle-o corp-check'"></div>
+                <div class="corp-text pull-right">Corporate</div>
+            </div>
+            <img ng-show="!vm.showHotelSelected && vm.showCorporateBox()" ng-src="images/usertype-arrow-left.png" />
+            <img ng-show="vm.showHotelSelected && vm.showCorporateBox()" ng-src="images/usertype-arrow-right.png" />
+            <div id="hotel-selector-box" class="pull-right hotel-selector-box pointer" ng-if="!vm.openHotelSelector" ng-click="vm.selectRadio('Hotel')">
+                <div ng-if="vm.showCorporateBox()" ng-class="vm.showHotelSelected ? 'fa fa-check-circle hotel-check' : 'fa fa fa-circle-o hotel-check'"></div>
+                <div ng-if="vm.showHotelBox" class="hotel-details">
+                    <img class="hotel-image" ng-src="{{vm.hotelLogoImage}}" />
+                    <div class="hotel-text pull-right">{{vm.hotelDescription}}</div>
+                </div>
+                <div ng-if="!vm.showHotelBox" class="select-hotel-text pull-right">{{vm.selectHotelText}}</div>
+            </div>
+        </div>
+    </div>
+</header>

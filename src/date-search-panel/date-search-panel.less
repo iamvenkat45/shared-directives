@@ -1,0 +1,45 @@
+date-search-panel {
+    .dsp-toggle-panel {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        &:hover {
+            box-shadow: 1px 1px 2px 2px #ccc;
+        }
+    }
+    .dsp-form-container {
+        transform-origin: top;
+    }
+    .date-to {
+        display: inline-block;
+        border: 1px solid #ccc;
+        background-color: #e4e4e4;
+        width: 34px;
+        height: 33px;
+        line-height: 34px;
+        margin-left: -4px;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+@keyframes dspSlideIn {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes dspSlideOut {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}

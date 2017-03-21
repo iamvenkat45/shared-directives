@@ -1,0 +1,11 @@
+<div class="col-xs-2 placeholder invisible">
+    <!-- this is here just to calculate the position of the bar correctly -->
+    <button type="button" class="btn">Placeholder</button>
+</div>
+
+<div class="col-xs-10 dockable">
+    <div class="docked-fixed-width">
+        <button type="button" class="btn btn-primary pull-right btn-save" ng-disabled="!sc.isSaveEnabled()" ng-click="sc.save()">Save</button>
+        <button type="button" class="btn btn-default pull-right btn-cancel" ng-disabled="!sc.isCancelEnabled()" ng-click="sc.cancel()">Cancel</button>
+    </div>
+</div>

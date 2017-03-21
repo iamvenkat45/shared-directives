@@ -1,0 +1,7 @@
+<div class="debug-container fade" ng-class="{in: debugVisible}">
+    <div class="details">
+        <h4 class="title">Build Details</h4>
+        <pre>{{buildDetails | json}}</pre>
+        <div uib-tooltip="Close" tooltip-placement="left" class="debug-close" ng-click="debugVisible = false">×</div>
+    </div>
+</div>

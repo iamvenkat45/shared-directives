@@ -1,0 +1,14 @@
+<div id="line-segment-editor" class="line-segment-editor">
+    <div class="main-labels">A<br>B</div>
+    <table id="sample4" width="100%" cellspacing="0" cellpadding="0" border="0" class="JColResizer">
+        <tbody>
+            <tr>
+                <td ng-repeat="segment in vm.segments track by $index" id="{{'segment' + $index}}" class="segment" ng-style="segment.styles"></td>
+                <div ng-init="vm.tableRendered()"></div>
+            </tr>
+        </tbody>
+    </table>
+    <div id="slots-box" class="slots-box">
+        <div ng-repeat="slot in vm.slotArray track by $index" id="{{$index}}" class="pull-left slots" ng-style="vm.slotWidth" ng-click="vm.slotEntered($index)"></div>
+    </div>
+</div>

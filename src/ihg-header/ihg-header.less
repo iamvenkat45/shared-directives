@@ -1,0 +1,263 @@
+div.header {
+    color: white;
+    padding: 0 15px;
+    // background-color: @ihg-color-corporate-blue;
+    height: 56px;
+}
+
+#sub-menu-item {
+    padding-right: 10px;
+    padding-top: 11px;
+    width: 30px;
+}
+
+div.header #hamburger {
+    padding-right: 10px;
+    padding-top: 11px;
+    width: 30px;
+}
+
+div.header .hamburger {
+    font-size: 2em;
+    padding-top: 4px;
+}
+
+div.header .ham-drop-down {
+    font-size: 14px;
+    color: #ccc;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    z-index: 10000;
+    background-color: rgb(59, 63, 81);
+    outline: none;
+}
+
+div.header .slide-right.ng-enter {
+    transition: 0.2s linear all;
+    left: -200px;
+}
+
+div.header .slide-right.ng-enter-active {
+    transition: 0.2s linear all;
+    left: 0px;
+}
+
+div.header .slide-right.ng-leave {
+    transition: 0.2s linear all;
+    left: 0px;
+}
+
+div.header .slide-right.ng-leave-active {
+    transition: 0.2s linear all;
+    left: 0px;
+}
+
+div.header .ham-menu-item {
+    min-width: 200px;
+    padding: 10px 15px 10px 15px;
+}
+
+div.header .ham-menu-item:hover {
+    border-left: 5px solid #578EBE;
+    background-color: #333;
+    padding-left: 10px;
+}
+
+div.header .logo-title {
+    padding-top: 10px;
+}
+
+div.header #ihg-logo {
+    height: 36px;
+}
+
+div.header .title-text {
+    font-size: 20px;
+    font-weight: lighter;
+    padding-top: 4px;
+}
+
+div.header .hotel-selector {
+    font-size: 11px
+}
+
+div.header .corp-selector-box {
+    height: 48px;
+    background-color: #999;
+    padding: 8px 15px 0 15px;
+}
+
+div.header .hotel-selector-box {
+    height: 48px;
+    background-color: white;
+    color: #333;
+    padding: 8px 15px 0 15px;
+}
+
+div.header .corp-selector-box .corp-check {
+    padding-right: 12px;
+    padding-top: 11px;
+    font-size: 20px;
+}
+
+div.header .hotel-selector-box .hotel-check {
+    padding-right: 8px;
+    padding-top: 11px;
+    font-size: 20px;
+    color: grey;
+    font-weight: lighter;
+}
+
+div.header .corp-selector-box .corp-text {
+    padding-top: 13px
+}
+
+.header .corp-selector-box .corp-text {
+    padding-top: 8px;
+}
+
+div.header .hotel-selector-box .hotel-image {
+    padding-right: 15px;
+}
+
+div.header .hotel-selector-box .hotel-text {
+    padding-top: 12px
+}
+
+div.header .admin {
+    padding: 18px 0 18px 15px;
+}
+
+div.header .username-text {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+div.header #admin {
+    padding-top: 16px;
+}
+
+div.header .admin-menu {
+    padding-left: 15px;
+}
+
+div.header .admin-drop-down {
+    font-size: 14px;
+    color: #3B3F51;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    z-index: 10000;
+    background-color: #FFF;
+    outline: none;
+}
+
+div.header .admin-menu-item {
+    min-width: 200px;
+    padding: 10px 15px 10px 15px;
+}
+
+div.header .top-border {
+    border-top: 1px solid #DDD;
+}
+
+div.header .admin-menu-item:hover {
+    background-color: #666666;
+    color: white;
+    padding-right: 10px;
+}
+
+div.header .admin-menu-item:last-child {
+    background-color: #D1D5D8;
+}
+
+div.header .admin-menu-item:last-child:hover {
+    background-color: #666666;
+    color: white;
+}
+
+div.header .pre-admin-icon {
+    padding-right: 8px;
+    text-align: center;
+    width: 15px;
+}
+
+div.header .post-admin-icon {
+    padding-left: 7px;
+    text-align: center;
+    width: 20px;
+}
+
+div.header .logout-clock {
+    padding-left: 60px;
+}
+
+.ham-menu-item:hover>.sub_sidebar {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.sub_sidebar {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #3b3f51;
+    position: fixed;
+    // left: 230px;
+    margin-top: -30px;
+    height: inherit;
+    z-index: 0;
+}
+
+.sub_sidebar ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sub_sidebar li {
+    padding: 10.5px 15px 10px 15px;
+    cursor: pointer;
+    background-color: #3b3f51;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+.sub_sidebar li:hover {
+    background-color: #333;
+}
+
+.sub_sidebar a {
+    color: #ccc;
+    font-size: inherit;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sub_sidebar li:hover {}
+
+.gt-float-left {
+    float: right;
+    font-size: x-small;
+    padding-top: 6px;
+}
+
+div.header .hotel-selector-box .select-hotel-text {
+    padding-top: 13px;
+}
+
+div.header .hotel-selector-box .hotel-details {
+    display: inline-block;
+}
+
+div.header #disableHover:hover {
+    cursor: default;
+    background-color: #3b3f51;
+}

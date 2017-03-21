@@ -1,0 +1,59 @@
+<div id="choose-hotel">
+    <div class="modal-header">
+        <h4 class="modal-title">Select a Hotel</h4>
+    </div>
+    <div class="modal-body">
+        <p ng-if="!vm.historyList">No frequent hotel available at this stage. Start by looking for a hotel below.</p>
+        <p ng-if="vm.historyList.length > 1">{{vm.historyList.length}} most recent hotels</p>
+        <p ng-if="vm.historyList.length === 1">Most recent hotels</p>
+
+        <li class="history-list" ng-repeat="histHotel in vm.historyList track by $index">
+            <ul class="history-item pointer" ng-click="vm.chooseHotel(histHotel)">
+                <span class="fa fa-check" ng-if="$index === 0"></span> {{histHotel.mnemonic}} - {{histHotel.name}} - {{histHotel.addressLine1}} {{histHotel.addressLine2}}
+            </ul>
+        </li>
+    </div>
+    <div class="lower-portion">
+        Search for Additional Hotels
+
+        <form ng-submit="vm.search()" class="input-group search-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    {{vm.searchType}} <span class="caret search-caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a ng-click="vm.assignSearchType('Hotel Code')">Hotel Code</a></li>
+                    <li><a ng-click="vm.assignSearchType('Hotel Name')">Hotel Name</a></li>
+                    <li><a ng-click="vm.assignSearchType('City Name')">City Name</a></li>
+                </ul>
+            </div>
+            <!-- /btn-group -->
+
+            <input type="text" class="form-control" ng-model="vm.searchInput" ng-minlength="vm.searchLength" ng-change="vm.convert()" ng-focus="vm.showSearchResults = true">
+            <span class="input-group-addon" ng-click="vm.search()"><span class="fa fa-search"></span></span>
+        </form>
+        <!-- /input-group -->
+
+        <!-- results list for SEARCH HOTEL CODE -->
+        <div ng-if="vm.searchType === 'Hotel Code' && vm.showSearchResults" class="search-results">
+            <li class="search-list" ng-repeat="hotel in vm.allHotelList | startsWith:vm.searchInput:'mnemonic' track by $index">
+                <ul class="search-item pointer" ng-click="vm.chooseHotel(hotel)">
+                    <span ng-bind-html="vm.highlight(hotel.mnemonic, vm.searchInput)"></span> -
+                    <span>{{hotel.name}}</span>
+                </ul>
+            </li>
+            <!-- <p ng-hide="vm.allHotelList.length">Nothing here!</p> This wouldn't work for me - NAF -->
+            <p ng-show="(vm.allHotelList | startsWith:vm.searchInput:'mnemonic').length == 0">No Results Found</p>
+        </div>
+        <!-- results list for SEARCH HOTEL NAME -->
+        <div ng-if="vm.searchType === 'Hotel Name' && vm.showSearchResults" class="search-results">
+            <li class="search-list" ng-repeat="hotel in vm.allHotelList | filter:{name:vm.searchInput} track by $index">
+                <ul class="search-item pointer" ng-click="vm.chooseHotel(hotel)">
+                    <span>{{hotel.mnemonic}}</span> -
+                    <span ng-bind-html="vm.highlight(hotel.name, vm.searchInput)"></span>
+                </ul>
+            </li>
+            <p ng-show="(vm.allHotelList | filter:{name:vm.searchInput}).length == 0">No Results Found</p>
+        </div>
+    </div>
+</div>

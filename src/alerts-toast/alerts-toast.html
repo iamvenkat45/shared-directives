@@ -1,0 +1,7 @@
+<div class="alerts-toast">
+    <div uib-alert type="{{at.alertType}}" ng-if="at.showAlert">
+        <button type="button" class="close close-font" ng-if="at.alertDismissible" data-dismiss="alert" ng-click="at.closeAlert()">&times;</button>
+        <strong>{{at.alertCaption}}</strong><span ng-if="at.alertCaption">&nbsp;</span>{{at.alertMessage}}
+        <button ng-class="'btn btn-' + at.alertType" ng-if="at.showAlertAction" ng-click="at.submitAction()">{{at.alertActionName}}</button>
+    </div>
+</div>
