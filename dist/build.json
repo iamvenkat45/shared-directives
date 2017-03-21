@@ -1,8 +1,8 @@
 {
     "appName": "shared-directives",
-    "version": "v0.0.4",
+    "version": "v0.0.5",
     "repository": "git+https://github.com/iamvenkat45/shared-directives.git",
-    "buildTime": "2017-03-21T15:46:23Z",
+    "buildTime": "2017-03-21T17:36:34Z",
     "buildBy": "bandlav",
     "dependencies": {
         "jquery": "~2.2",

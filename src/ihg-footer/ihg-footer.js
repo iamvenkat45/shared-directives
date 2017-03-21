@@ -8,7 +8,6 @@ angular.module('shared-directives').directive('ihgFooter', function () {
         scope: {
             lastLogin: "@",
             versionNumber: "@",
-            copyrightYear: "@",
             userLoggedIn: '=',
             userData: '='
         },
@@ -23,6 +22,7 @@ angular.module('shared-directives').directive('ihgFooter', function () {
 
 ihgFooterController = ['$scope', 'Globals', function ($scope, Globals) {
     var vm = this;
+    vm.copyrightYear = "2017";
 
     $scope.$watch("vm.lastLogin", function setTimeZone(newValue) {
         var now = new Date().toString();
