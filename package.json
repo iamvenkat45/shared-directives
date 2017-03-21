@@ -1,0 +1,22 @@
+{
+  "name": "shared-directives",
+  "version": "1.0.0",
+  "description": "This project contains all the common directives",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamvenkat45/shared-directives.git"
+  },
+  "keywords": [
+    "shared"
+  ],
+  "author": "Venkat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamvenkat45/shared-directives/issues"
+  },
+  "homepage": "https://github.com/iamvenkat45/shared-directives#readme"
+}
