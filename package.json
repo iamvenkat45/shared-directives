@@ -1,11 +1,9 @@
 {
   "name": "shared-directives",
-  "version": "1.0.0",
+  "version": "v0.0.3",
   "description": "This project contains all the common directives",
-  "main": [
-    "./dist/common.full.min.js",
-    "./dist/common.full.min.css"
-    ],
+  "main": "./dist/common.full.min.js",
+  "style": "./dist/common.full.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

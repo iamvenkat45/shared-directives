@@ -1,5 +1,6 @@
 /bower_components
 /node_modules
-/dist
+/dist/bower_components
+/dist/index.html
 .idea/workspace.xml
 /.idea
