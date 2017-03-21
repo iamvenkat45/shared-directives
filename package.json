@@ -1,6 +1,6 @@
 {
   "name": "shared-directives",
-  "version": "v0.0.5",
+  "version": "v0.0.6",
   "description": "This project contains all the common directives",
   "main": "./dist/app.full.min.js",
   "style": "./dist/app.full.min.css",
