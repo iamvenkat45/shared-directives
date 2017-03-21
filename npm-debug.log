@@ -1,0 +1,144 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Users\\bandlav\\workspace\\shared-directives',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\bandlav\AppData\Roaming\npm-cache\rmsv2.commonComponents\0.0.4\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\bandlav\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle rmsv2.commonComponents@0.0.4~prepublish: rmsv2.commonComponents@0.0.4
+11 silly lifecycle rmsv2.commonComponents@0.0.4~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\bandlav\\AppData\\Roaming\\npm-cache\\rmsv2.commonComponents\\0.0.4\\package.tgz',
+12 verbose tar pack   'C:\\Users\\bandlav\\workspace\\shared-directives' ]
+13 verbose tarball C:\Users\bandlav\AppData\Roaming\npm-cache\rmsv2.commonComponents\0.0.4\package.tgz
+14 verbose folder C:\Users\bandlav\workspace\shared-directives
+15 verbose addLocalTarball adding from inside cache C:\Users\bandlav\AppData\Roaming\npm-cache\rmsv2.commonComponents\0.0.4\package.tgz
+16 verbose correctMkdir C:\Users\bandlav\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd rmsv2.commonComponents@0.0.4
+18 verbose afterAdd C:\Users\bandlav\AppData\Roaming\npm-cache\rmsv2.commonComponents\0.0.4\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\bandlav\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\bandlav\AppData\Roaming\npm-cache\rmsv2.commonComponents\0.0.4\package\package.json written
+21 silly publish { name: 'rmsv2.commonComponents',
+21 silly publish   version: '0.0.4',
+21 silly publish   description: 'This project contains all the common directives',
+21 silly publish   main: './dist/app.full.min.js',
+21 silly publish   style: './dist/app.full.min.css',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/iamvenkat45/shared-directives.git' },
+21 silly publish   keywords: [ 'shared' ],
+21 silly publish   author: { name: 'Venkat' },
+21 silly publish   license: 'ISC',
+21 silly publish   bugs: { url: 'https://github.com/iamvenkat45/shared-directives/issues' },
+21 silly publish   homepage: 'https://github.com/iamvenkat45/shared-directives#readme',
+21 silly publish   devDependencies:
+21 silly publish    { grunt: '~1.0.1',
+21 silly publish      'grunt-angular-templates': '~1.0.3',
+21 silly publish      'grunt-browser-output': '~1.0.3',
+21 silly publish      'grunt-contrib-clean': '~1.0.0',
+21 silly publish      'grunt-contrib-concat': '~1.0.0',
+21 silly publish      'grunt-contrib-connect': '^1.0.2',
+21 silly publish      'grunt-contrib-copy': '~1.0.0',
+21 silly publish      'grunt-contrib-cssmin': '~1.0.1',
+21 silly publish      'grunt-contrib-htmlmin': '~1.3.0',
+21 silly publish      'grunt-contrib-jshint': '~1.0.0',
+21 silly publish      'grunt-contrib-less': '^1.3.0',
+21 silly publish      'grunt-contrib-uglify': '~1.0.1',
+21 silly publish      'grunt-contrib-watch': '~1.0.0',
+21 silly publish      'grunt-dom-munger': '~3.4',
+21 silly publish      'grunt-jscs': '^2.7.0',
+21 silly publish      'grunt-json-generator': '^0.1.0',
+21 silly publish      'grunt-karma': '~0.12.2',
+21 silly publish      'grunt-ng-annotate': '~2.0.2',
+21 silly publish      'grunt-serve': '^0.1.6',
+21 silly publish      'jasmine-core': '~2.4.1',
+21 silly publish      'jshint-stylish': '^2.2.1',
+21 silly publish      karma: '~0.13',
+21 silly publish      'karma-chrome-launcher': '~0.2',
+21 silly publish      'karma-firefox-launcher': '~0.1.3',
+21 silly publish      'karma-jasmine': '~0.3.8',
+21 silly publish      'karma-mocha-reporter': '~2.0.1',
+21 silly publish      'karma-ng-html2js-preprocessor': '~0.2.1',
+21 silly publish      'karma-phantomjs-launcher': '~1.0',
+21 silly publish      'load-grunt-tasks': '~3.5.0',
+21 silly publish      'phantomjs-prebuilt': '^2.1.4',
+21 silly publish      plop: '^1.7.4',
+21 silly publish      'time-grunt': '^1.0.0' },
+21 silly publish   engines: { node: '>=5.0.0', npm: '>=3.3.0' },
+21 silly publish   readme: '# shared-directives\r\nThis project contains the shared directives\r\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'a28718bcf4fdd96b0a7c37fb2efc38bb3a3cdb41',
+21 silly publish   _id: 'rmsv2.commonComponents@0.0.4',
+21 silly publish   _shasum: '88b8b3154e8c6a4de51b2ef73e6fb1251032e0ef',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name rmsv2.commonComponents
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'rmsv2.commonComponents',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'rmsv2.commonComponents',
+26 silly mapToRegistry   name: 'rmsv2.commonComponents',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/rmsv2.commonComponents
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\bandlav\AppData\Roaming\npm-cache\rmsv2.commonComponents\0.0.4\package.tgz
+30 verbose request uri https://registry.npmjs.org/rmsv2.commonComponents
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 11:34:09 AM
+33 verbose request using bearer token for auth
+34 verbose request id 24e5ec3ea022de17
+35 http request PUT https://registry.npmjs.org/rmsv2.commonComponents
+36 http 400 https://registry.npmjs.org/rmsv2.commonComponents
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '66',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 21 Mar 2017 15:34:10 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-atl6239-ATL',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1490110449.877152,VS0,VE600',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating C:\Users\bandlav\AppData\Roaming\npm-cache\registry.npmjs.org\rmsv2.commonComponents on PUT
+39 error publish Failed PUT 400
+40 verbose stack Error: "rmsv2.commonComponents" is invalid for new packages : rmsv2.commonComponents
+40 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+40 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+40 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+41 verbose statusCode 400
+42 verbose pkgid rmsv2.commonComponents
+43 verbose cwd C:\Users\bandlav\workspace\shared-directives
+44 error Windows_NT 6.1.7601
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.9.2
+47 error npm  v3.10.9
+48 error code E400
+49 error "rmsv2.commonComponents" is invalid for new packages : rmsv2.commonComponents
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

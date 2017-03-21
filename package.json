@@ -1,5 +1,5 @@
 {
-  "name": "rmsv2.commonComponents",
+  "name": "shared-directives",
   "version": "v0.0.4",
   "description": "This project contains all the common directives",
   "main": "./dist/app.full.min.js",
