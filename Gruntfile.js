@@ -159,7 +159,7 @@ module.exports = function(grunt) {
                     read: [{
                         selector: 'script[data-concat!="false"]',
                         attribute: 'src',
-                        writeto: 'appjs'
+                        writeto: 'appsjs'
                     }, {
                         selector: 'link[rel="stylesheet"][data-concat!="false"]',
                         attribute: 'href',
@@ -176,10 +176,10 @@ module.exports = function(grunt) {
                         html: '<script src="env.js"></script>'
                     }, {
                         selector: 'head',
-                        html: '<link rel="stylesheet" href="common.full.min.css">'
+                        html: '<link rel="stylesheet" href="app.full.min.css">'
                     }, {
                         selector: 'body',
-                        html: '<script src="common.full.min.js"></script>'
+                        html: '<script src="app.full.min.js"></script>'
                     }]
                 },
                 src: 'index.html',
@@ -189,25 +189,25 @@ module.exports = function(grunt) {
         cssmin: {
             main: {
                 src: ['temp/app.css', '<%= dom_munger.data.appcss %>'],
-                dest: 'dist/common.full.min.css'
+                dest: 'dist/app.full.min.css'
             }
         },
         concat: {
             main: {
-                src: ['<%= dom_munger.data.appjs %>', '<%= ngtemplates.main.dest %>'],
-                dest: 'temp/common.full.js'
+                src: ['<%= dom_munger.data.appsjs %>', '<%= ngtemplates.main.dest %>'],
+                dest: 'temp/app.full.js'
             }
         },
         ngAnnotate: {
             main: {
-                src: 'temp/common.full.js',
-                dest: 'temp/common.full.js'
+                src: 'temp/app.full.js',
+                dest: 'temp/app.full.js'
             }
         },
         uglify: {
             main: {
-                src: 'temp/common.full.js',
-                dest: 'dist/common.full.min.js'
+                src: 'temp/app.full.js',
+                dest: 'dist/app.full.min.js'
             }
         },
         htmlmin: {

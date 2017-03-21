@@ -1,8 +1,8 @@
 {
-    "appName": "shared-directives",
-    "version": "1.0.0",
+    "appName": "rmsv2.commonComponents",
+    "version": "v0.0.3",
     "repository": "git+https://github.com/iamvenkat45/shared-directives.git",
-    "buildTime": "2017-03-21T14:44:18Z",
+    "buildTime": "2017-03-21T15:31:51Z",
     "buildBy": "bandlav",
     "dependencies": {
         "jquery": "~2.2",
