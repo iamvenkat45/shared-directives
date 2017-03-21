@@ -3,12 +3,12 @@ var currencyInfoComponent = {
         text: '@',
         noPad: '<'
     },
-    templateUrl: 'src/common_components/currency-info/currency-info.html',
+    templateUrl: 'src/currency-info/currency-info.html',
     controller: CurrencyInfoController,
     controllerAs: 'ci'
 };
 
-angular.module('rmsv2.commonComponents').component('currencyInfo', currencyInfoComponent);
+angular.module('shared-directives').component('currencyInfo', currencyInfoComponent);
 
 /* @ngInject */
 function CurrencyInfoController(UserService) {

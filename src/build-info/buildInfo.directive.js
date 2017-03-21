@@ -1,4 +1,4 @@
-angular.module('rmsv2.commonComponents').directive('buildInfo', function ($http, $document) {
+angular.module('shared-directives').directive('buildInfo', function ($http, $document) {
     var link = function (scope) {
         var keys = '',
             code = '6566826567656865668265', //enter the text as 'abracadabra' and press enter
@@ -53,6 +53,6 @@ angular.module('rmsv2.commonComponents').directive('buildInfo', function ($http,
     return {
         restrict: 'A',
         link: link,
-        templateUrl: 'src/common_components/build-info/build-info.html'
+        templateUrl: 'src/build-info/build-info.html'
     };
 });

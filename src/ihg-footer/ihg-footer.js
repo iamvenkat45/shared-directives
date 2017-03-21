@@ -1,10 +1,10 @@
 var ihgFooterController;
 
-angular.module('rmsv2.commonComponents').directive('ihgFooter', function () {
+angular.module('shared-directives').directive('ihgFooter', function () {
     return {
         restrict: 'E',
         replace: true,
-        templateUrl: 'src/common_components/ihg-footer/ihg-footer.html',
+        templateUrl: 'src/ihg-footer/ihg-footer.html',
         scope: {
             lastLogin: "@",
             versionNumber: "@",

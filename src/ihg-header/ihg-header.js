@@ -1,6 +1,6 @@
 var ihgHeaderController;
 
-angular.module('rmsv2.commonComponents').directive('ihgHeader', function () {
+angular.module('shared-directives').directive('ihgHeader', function () {
     return {
         restrict: 'E',
         replace: true,
@@ -12,7 +12,7 @@ angular.module('rmsv2.commonComponents').directive('ihgHeader', function () {
             route: '=',
             userData: '='
         },
-        templateUrl: 'src/common_components/ihg-header/ihg-header.html',
+        templateUrl: 'src/ihg-header/ihg-header.html',
         controller: ihgHeaderController,
         controllerAs: 'vm',
         bindToController: true,

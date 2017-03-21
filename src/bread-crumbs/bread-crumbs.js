@@ -1,11 +1,11 @@
 var breadCrumbController;
 
-angular.module('rmsv2.commonComponents').directive('breadCrumbs', function () {
+angular.module('shared-directives').directive('breadCrumbs', function () {
     return {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'src/common_components/bread-crumbs/bread-crumbs.html',
+        templateUrl: 'src/bread-crumbs/bread-crumbs.html',
         controller: breadCrumbController,
         controllerAs: 'vm',
         link: function (scope, element, attrs, fn) {}
